@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Navbar</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanalei&family=Playwrite+DE+SAS:wght@100..400&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #fff;
+    }
+
+    .navbar {
+      background-color: #fff;
+      border-bottom: 1px solid #000;
+      padding: 10px 25px;
+    }
+
+    .navbar-brand img {
+      height: 40px;
+    }
+
+    .navbar-toggler {
+      border: none;
+    }
+
+    .navbar-nav .nav-link {
+      color: #000;
+      font-weight: 500;
+      text-transform: uppercase;
+      margin: 5px 10px;
+    }
+
+    .navbar-nav .nav-link:hover {
+      color: #f9a825;
+    }
+
+    .dropdown-menu {
+      border: none;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .lang {
+      font-weight: 600;
+    }
+
+    .lang .active {
+      color: #f9a825;
+    }
+
+    .lang span {
+      color: #000;
+      margin: 0 6px;
+    }
+
+
+    @media (max-width: 992px) {
+      .lang {
+        text-align: center;
+        margin-top: 10px;
+      }
+    }
+       .jumbotron {
+      position: relative;
+      width: 100%;
+      height: 50vh; 
+      overflow: hidden;
+    }
+
+    .jumbotron img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; 
+    }
+
+   
+    @media (max-width: 768px) {
+      .jumbotron {
+        height: 45vh;
+      }
+    }
+      body {
+      background-color: #fff;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .ticket-card {
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      padding: 20px;
+      margin-bottom: 15px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      background-size: cover;
+      background-position: center;
+      color: #fff;
+    }
+
+    .ticket-card.white {
+      background: #fff;
+      color: #000;
+    }
+
+    .ticket-card.teal {
+      background: #00a8a8;
+      background-image: url('https://www.transparenttextures.com/patterns/palm-leaf.png');
+    }
+
+    .ticket-card.yellow {
+      background: #f9b233;
+      background-image: url('https://www.transparenttextures.com/patterns/large-leaves.png');
+    }
+
+    .ticket-info {
+      flex: 1;
+      min-width: 250px;
+    }
+
+    .ticket-info h4 {
+      font-weight: 700;
+      font-size: 1.4rem;
+    }
+
+    .ticket-info p {
+      margin: 5px 0;
+      font-size: 0.95rem;
+    }
+
+    .ticket-price {
+      text-align: right;
+      min-width: 200px;
+    }
+
+    .ticket-price .price {
+      font-size: 1.6rem;
+      font-weight: 700;
+    }
+
+    .ticket-price small {
+      font-size: 0.85rem;
+    }
+
+    .discount {
+      color: #ff9800;
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+
+    .btn-select {
+      background-color: #0066cc;
+      color: #fff;
+      border-radius: 5px;
+      font-weight: 600;
+      padding: 8px 20px;
+    }
+
+    .btn-select:hover {
+      background-color: #004a99;
+      color: #fff;
+    }
+
+    @media (max-width: 768px) {
+      .ticket-card {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .ticket-price {
+        text-align: left;
+        margin-top: 10px;
+      }
+    }
+    body {
+      background: linear-gradient(135deg, #eef3f8, #fdfdfd);
+      font-family: "Poppins", sans-serif;
+      padding: 50px 15px;
+    }
+
+    .booking-form {
+      background: #fff;
+      border-radius: 15px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+      padding: 40px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .booking-form h2 {
+      text-align: center;
+      color: #004c8c;
+      font-weight: 600;
+      margin-bottom: 30px;
+    }
+
+    .form-label {
+      font-weight: 500;
+      color: #555;
+    }
+
+    .input-group-text {
+      background-color: #0077cc;
+      color: white;
+      border: none;
+    }
+
+    .form-control:focus, .form-select:focus {
+      border-color: #0077cc;
+      box-shadow: 0 0 0 0.2rem rgba(0, 119, 204, 0.25);
+    }
+
+    button {
+      background-color: #0077cc;
+      border: none;
+      transition: 0.3s;
+      font-weight: 500;
+    }
+
+    button:hover {
+      background-color: #005fa3;
+    }
+      body {
+      background: #f7f9fc;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .addon-card {
+      background: #fff;
+      border: 1px solid #e0e6ed;
+      border-radius: 12px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      padding: 18px 24px;
+      margin-bottom: 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: all 0.3s ease;
+    }
+    .addon-card:hover {
+      box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+      transform: translateY(-2px);
+    }
+
+    .addon-info {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .addon-info i {
+      background: #e3f2fd;
+      color: #007bff;
+      border-radius: 50%;
+      padding: 8px;
+      font-size: 1.2rem;
+    }
+
+    .addon-title {
+      font-weight: 700;
+      font-size: 1rem;
+      color: #222;
+    }
+
+    .addon-desc {
+      color: #666;
+      font-size: 0.9rem;
+    }
+
+    .select-btn {
+      background: #007bff;
+      border: none;
+      color: #fff;
+      font-weight: 600;
+      padding: 8px 16px;
+      border-radius: 6px;
+      transition: all 0.3s ease;
+    }
+
+    .select-btn:hover {
+      background: #0056b3;
+      transform: scale(1.03);
+    }
+
+    /* Promo Section */
+    .promo-section {
+      background: #fff;
+      border: 1px solid #e0e6ed;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      padding: 24px;
+      margin-top: 20px;
+    }
+
+    .form-control {
+      border-radius: 6px;
+    }
+
+    .apply-btn {
+      background: #007bff;
+      color: #fff;
+      font-weight: 600;
+      border-radius: 6px;
+      transition: 0.3s;
+    }
+
+    .apply-btn:hover {
+      background: #0056b3;
+      transform: scale(1.03);
+    }
+
+    .checkbox-label {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 0.9rem;
+      color: #444;
+      margin-top: 15px;
+    }
+      .footer {
+    background: linear-gradient(180deg, #0d1b2a 0%, #000814 100%);
+    color: #ddd;
+  }
+
+  .footer-link {
+    color: #d9ecff;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 0;
+    transition: 0.3s;
+  }
+  .footer-link:hover {
+    color: #00bfff;
+    transform: translateX(4px);
+  }
+
+  .social-icons a {
+    color: #fff;
+    font-size: 1.4rem;
+    transition: 0.3s;
+  }
+  .social-icons a:hover {
+    color: #00bfff;
+    transform: translateY(-3px);
+  }
+
+  .footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.1);
+    color: #aaa;
+    font-size: 0.9rem;
+  }
+
+  .wonderful-logo {
+    width: 140px;
+    opacity: 0.8;
+    margin-top: 10px;
+  }
+
+
+  </style>
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+
+      <a class="navbar-brand" href="#">
+        <img src="images/waterboom-removebg-preview.png" alt="Logo">
+      </a>
+
+     
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+     
+      <div class="collapse navbar-collapse justify-content-center" id="navbarMenu">
+        <ul class="navbar-nav">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Explore</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Option 1</a></li>
+              <li><a class="dropdown-item" href="#">Option 2</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Tickets & Pricing</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Ticket Info</a></li>
+              <li><a class="dropdown-item" href="#">Promotions</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="#">Eat & Drink</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Sustainability</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">F.A.Q</a></li>
+        </ul>
+
+        
+        <div class="lang ms-lg-3">
+          <span class="active">ENG</span> | <span>IND</span>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <main>
+  <section class="jumbotron">
+    <img src="images/oj.jpeg" alt="Waterboom Slide">
+  </section>
+   <h1 style="text-align:center;margin-top:20px">Welcome To Waterboom</h1>
+   <div class="container my-4">
+    <div class="ticket-card white">
+      <div class="ticket-info">
+        <h4 class="text-primary">SINGLE DAY PASS</h4>
+        <p>1 day access to the entire park and slides</p>
+        <p class="discount">10% off Online only!</p>
+      </div>
+      <div class="ticket-price">
+        <small>Start From</small><br>
+        <span class="price">IDR 445,500</span>
+        <br><button class="btn btn-select mt-2">SELECT ▼</button>
+      </div>
+    </div>
+
+   
+    <div class="ticket-card teal">
+      <div class="ticket-info">
+        <h4>DUO PASS</h4>
+        <p>1 day access to park for 2 people, incl locker + towels & 30min foot massage each</p>
+        <p>Up to 15% off entry</p>
+      </div>
+      <div class="ticket-price">
+        <span class="price">IDR 1,500,000</span>
+        <br><button class="btn btn-select mt-2">SELECT ▼</button>
+      </div>
+    </div>
+
+  
+    <div class="ticket-card yellow">
+      <div class="ticket-info">
+        <h4>FOUR PACK PASS</h4>
+        <p>1 day access to park for 4 people, incl family locker, 4 towels, 2 gelatos, 2 popcorns, & 10% off spa</p>
+        <p>Up to 20% off entry</p>
+      </div>
+      <div class="ticket-price">
+        <span class="price">IDR 2,600,000</span>
+        <br><button class="btn btn-select mt-2">SELECT ▼</button>
+      </div>
+    </div>
+    <section class="booking-form" style="margin: top 40px;">
+    <h2>Visitor Information</h2>
+
+    <form class="row g-4">
+      <!-- Visit Date -->
+      <div class="col-md-4">
+        <label class="form-label">Select your visit date</label>
+        <div class="input-group">
+          <span class="input-group-text"><i class="bi bi-calendar-event"></i></span>
+          <input type="date" class="form-control" required>
+        </div>
+      </div>
+
+      <!-- Full Name -->
+      <div class="col-md-4">
+        <label class="form-label">Enter your full name</label>
+        <div class="input-group">
+          <span class="input-group-text"><i class="bi bi-person"></i></span>
+          <input type="text" class="form-control" placeholder="Your full name" required>
+        </div>
+      </div>
+
+      <!-- Nationality -->
+      <div class="col-md-4">
+        <label class="form-label">Select your nationality</label>
+        <div class="input-group">
+          <span class="input-group-text"><i class="bi bi-globe"></i></span>
+          <select class="form-select" required>
+            <option value="" disabled selected>Select nationality</option>
+            <option>Indonesia</option>
+            <option>Malaysia</option>
+            <option>Singapore</option>
+            <option>Other</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Email -->
+      <div class="col-md-4">
+        <label class="form-label">Enter your email address</label>
+        <div class="input-group">
+          <span class="input-group-text"><i class="bi bi-envelope"></i></span>
+          <input type="email" class="form-control" placeholder="example@mail.com" required>
+        </div>
+      </div>
+
+      <!-- Confirm Email -->
+      <div class="col-md-4">
+        <label class="form-label">Confirm your email address</label>
+        <div class="input-group">
+          <span class="input-group-text"><i class="bi bi-envelope-check"></i></span>
+          <input type="email" class="form-control" placeholder="Re-enter email" required>
+        </div>
+      </div>
+
+      <!-- WhatsApp -->
+      <div class="col-md-4">
+        <label class="form-label">WhatsApp (optional)</label>
+        <div class="input-group">
+          <span class="input-group-text">+62</span>
+          <input type="text" class="form-control" placeholder="8139569xxxx">
+        </div>
+      </div>
+
+      <!-- Submit Button -->
+      <div class="col-12 text-center mt-3">
+        <button type="submit" class="btn btn-primary px-5 py-2">
+          <i class="bi bi-send-fill me-2"></i>Submit
+        </button>
+      </div>
+    </form>
+  </section>
+  <div class="container py-5">
+
+  <!-- ADDON 1 -->
+  <div class="addon-card">
+    <div class="addon-info">
+      <i class="bi bi-info-circle"></i>
+      <div>
+        <div class="addon-title">IN-PARK CREDIT</div>
+        <div class="addon-desc">
+          Worry-free and convenient way to pay for all transactions inside the park, using cashless wristband technology.
+        </div>
+      </div>
+    </div>
+    <button class="select-btn dropdown-toggle">SELECT</button>
+  </div>
+
+  <!-- ADDON 2 -->
+  <div class="addon-card">
+    <div class="addon-info">
+      <i class="bi bi-info-circle"></i>
+      <div>
+        <div class="addon-title">GAZEBO</div>
+        <div class="addon-desc">
+          Tickets must be selected first to purchase a gazebo. Bookings are only valid for the selected visit date.
+        </div>
+      </div>
+    </div>
+    <button class="select-btn dropdown-toggle">SELECT</button>
+  </div>
+
+  <!-- PROMO & DISCOUNT -->
+  <div class="promo-section">
+    <div class="checkbox-label">
+      <input type="checkbox" id="ktp">
+      <label for="ktp">
+        <strong>INDONESIAN KTP / KITAP / KITAS holder discount</strong><br>
+        Guest must present valid Indonesian ID (or proof of KITAS) on arrival or the difference between discount and full price will be charged.
+      </label>
+    </div>
+
+    <div class="row mt-4 align-items-center">
+      <div class="col-md-8">
+        <input type="text" class="form-control" placeholder="🔖 Enter your promo code">
+      </div>
+      <div class="col-md-4 text-end mt-2 mt-md-0">
+        <button class="btn apply-btn px-4">APPLY</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+  </div>
+</main>
+<footer class="footer text-light">
+  <div class="container py-5">
+    <div class="row gy-4 align-items-start">
+      
+      <!-- Logo & Deskripsi -->
+      <div class="col-md-4 text-center text-md-start">
+        <h4 class="fw-bold text-info">Aqua Splash</h4>
+        <p class="small text-light opacity-75 mb-2">
+          Nikmati keseruan tanpa batas di taman air terbaik — pengalaman tak terlupakan untuk seluruh keluarga!
+        </p>
+        <p class="text-secondary small mb-0">
+          Co-Branding Partner of Wonderful Indonesia
+        </p>
+      </div>
+
+      <!-- Navigasi -->
+      <div class="col-md-4 text-center">
+        <h5 class="fw-semibold text-uppercase mb-3 text-info">Explore</h5>
+        <ul class="list-unstyled small mb-0">
+          <li><a href="#" class="footer-link">Tickets</a></li>
+          <li><a href="#" class="footer-link">Attractions</a></li>
+          <li><a href="#" class="footer-link">Dining</a></li>
+          <li><a href="#" class="footer-link">FAQ</a></li>
+        </ul>
+      </div>
+
+      <!-- Kontak -->
+      <div class="col-md-4 text-center text-md-end">
+        <h5 class="fw-semibold text-uppercase mb-3 text-info">Contact Us</h5>
+        <p class="small mb-1">Jl. Kartika Plaza, Kuta, Badung, Bali 80361</p>
+        <p class="small mb-1">Phone: +62 361 755 676</p>
+        <p class="small mb-3">
+          Email: <a href="mailto:info@aquasplash.com" class="text-info text-decoration-none">info@aquasplash.com</a>
+        </p>
+
+        <div class="social-icons">
+          <a href="#" class="me-3"><i class="bi bi-facebook"></i></a>
+          <a href="#" class="me-3"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="me-3"><i class="bi bi-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center mt-4">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Logo_Pesona_Indonesia_%28Kementerian_Pariwisata%29.png/1200px-Logo_Pesona_Indonesia_%28Kementerian_Pariwisata%29.png" 
+           alt="Wonderful Indonesia Logo" class="wonderful-logo">
+    </div>
+  </div>
+
+  <div class="footer-bottom text-center py-3">
+    ©️ 2025 <span class="text-info fw-semibold">Aqua Splash</span> | All Rights Reserved
+  </div>
+</footer>
+
+
+ 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
